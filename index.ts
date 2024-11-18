@@ -13,6 +13,8 @@ const port: number = 3000;
 app.set('views', `${__dirname}/views`) //tìm đến thư mục tên là views
 app.set('view engine', 'pug') // xác định view engine có đuôi .pug
 
+app.use(express.static(`${__dirname}/public`)) // thiết lập thư mục chứa file tĩnh như js images css
+
 routeClient(app);
 
 app.listen(port, () => {
